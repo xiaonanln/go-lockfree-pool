@@ -1,4 +1,4 @@
-package fastpool
+package lfpool
 
 import (
 	"os"
@@ -36,7 +36,7 @@ func TestSyncPool(t *testing.T) {
 
 func TestFastPool(t *testing.T) {
 	p := NewFastPool(1024, newTestObject)
-	testPool(t, "FastPool.pprof", p)
+	testPool(t, "Pool.pprof", p)
 }
 
 func testPool(t *testing.T, profileName string, p pool) {
